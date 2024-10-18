@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Car Price Predictor</h1>
+        <p>Selling your car? Approximate a good price here!</p>
+        <form action="/predict" method="post">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" required>
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" required>
+            <label for="mileage">Mileage</label>
+            <input type="number" name="mileage" id="mileage" required>
+            <label for="fuel_type">Fuel Type</label>
+            <select name="fuel_type" id="fuel_type" required>
+                <option value="Gasoline">Gasoline</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Plug-In Hybrid">Plug-In Hybrid</option>
+                <option value="E85 Flex Fuel">E85 Flex Fuel</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="transmission">Transmission</label>
+            <select name="transmission" id="transmission" required>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Variator">Variator</option>
+                <option value="Tiptronic">Tiptronic</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="ext_col">External Color</label>
+            <input type="text" name="ext_col" id="ext_col" required>
+            <label for="int_col">Internal Color</label>
+            <input type="text" name="int_col" id="int_col" required>
+            <label for="accident">Accident History</label>
+            <select name="accident" id="accident" required>
+                <option value="None Reported">None Reported</option>
+                <option value="At least 1 accident or damage reported">At least 1 accident or damage reported</option>
+            </select>
+            <label for="clean_title">Clean Title</label>
+            <select name="clean_title" id="clean_title" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
