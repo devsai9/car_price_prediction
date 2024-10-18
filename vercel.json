@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "distDir": "build"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -14,8 +11,5 @@
       "src": "/(.*)",
       "dest": "/app.py"
     }
-  ],
-  "scripts": {
-    "postinstall": "pip install setuptools"
-  }
+  ]
 }
