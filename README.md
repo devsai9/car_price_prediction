@@ -1,6 +1,12 @@
 # Car Smart
 Predictive Pricing Tool for Cars
 
+## Use the Tool
+1. Clone the repository (`git clone`)
+2. Optional: Create a virtual environment
+3. Install the required packages (`pip install -r requirements.txt`)
+4. Run the Flask app (`flask run`)
+
 ## Inspiration
 The need for a transparent and accurate car pricing tool inspired me. I wanted to leverage machine learning to provide car owners and buyers with a reliable way to estimate vehicle values.
 
@@ -9,6 +15,9 @@ Car Smart predicts the price of a car based on various factors such as brand, ye
 
 ## How I built it
 I used Python and Flask for the backend, with TensorFlow to build and train my machine learning model. We also utilized LabelEncoder to handle categorical data and ensure smooth data processing. The frontend uses HTML and CSS to create a user-friendly interface.
+
+Languages: Python, HTML, CSS<br>
+Main Packages: Flask, TensorFlow, Sci-kit learn, Pandas, NumPy, Joblib
 
 ## Challenges I ran into
 Handling categorical data dynamically and ensuring the model's accuracy were significant challenges. I also faced issues with encoding data and integrating the model with our Flask backend.
