@@ -5,24 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Price Prediction</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
         #container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-family: 'Poppins', sans-serif;
         }
 
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            font-family: inherit;
+        }
+
+        #form > input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #007bff;
+            font-family: inherit !important;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: inherit;
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <h1>Car Price Predictor</h1>
-        <p>Selling your car? Approximate a good price here!</p>
+        <h1>Car Smart</h1>
+        <p>Predictive Pricing Tool for Cars</p>
         <form action="/predict" method="post">
             <label for="brand">Brand</label>
             <input type="text" name="brand" id="brand" required>
@@ -54,7 +75,7 @@
             <input type="text" name="int_col" id="int_col" required>
             <label for="accident">Accident History</label>
             <select name="accident" id="accident" required>
-                <option value="None Reported">None Reported</option>
+                <option value="None reported">None Reported</option>
                 <option value="At least 1 accident or damage reported">At least 1 accident or damage reported</option>
             </select>
             <label for="clean_title">Clean Title</label>
